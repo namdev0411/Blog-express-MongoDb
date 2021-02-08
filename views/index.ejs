@@ -12,12 +12,12 @@
     <div class="text-right m-4">
         <a class="btn btn-outline-primary"  href="/post/new">新記事 +</a>
     </div>
-    <main class="container m-4">
+    <main class="container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-12">
                 <%- include('./category') %> 
             </div>
-            <div class="col-md-8 post">
+            <div class="col-md-8 col-sm-12 post">
                 <ul>
                     <% for (let i =0; i <posts.length;  i++ ) { %>
                         <li>                               
@@ -63,14 +63,13 @@
                     <% } %> 
                 </ul>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-12">
                 <article>
                     <ul>
                         <li>
                             <a href="#">
                                 <h4 class="text-center">私は誰か</h4>
                             </a>
-                            <p>text ngan</p>
                         </li>
                     </ul>
                 </article>

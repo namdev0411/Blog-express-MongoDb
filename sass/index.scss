@@ -27,3 +27,25 @@ main{
 .btn-edit{
     color: #fff !important;
 }
+@media only screen and (max-width: 576px){
+    .category{
+        height: 0px;
+        width: 50%;
+        overflow-y: hidden;
+        transition: all .35s ease-in-out;
+        position: absolute;
+        z-index: 2;
+        background: #fff;
+        &.active{
+            height: 200px;
+        }
+    }
+    .hamberger p{
+        display: block;
+        pointer-events: all;
+        width: 45px;
+        height: 3px;
+        background-color: #000;
+        margin: 8px;
+    }
+}

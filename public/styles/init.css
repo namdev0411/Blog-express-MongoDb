@@ -17,3 +17,7 @@
   a:hover{
     text-decoration: none !important;
   }
+  body{
+    max-width: 100%;
+    overflow-x: hidden;
+  }

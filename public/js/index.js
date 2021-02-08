@@ -7,3 +7,7 @@ document.querySelectorAll(".btn-delete").forEach(btn=>{
         formDelete.action=`/post/delete/${id}`;
     })
 })
+const hamberger = document.querySelector("#hamberger");
+hamberger.addEventListener('click',()=>{
+    document.querySelector("#category").classList.toggle("active");
+})

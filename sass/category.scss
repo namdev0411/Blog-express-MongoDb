@@ -1,3 +1,21 @@
 .category li{
     margin: 20px;
 }
+.hamberger p{
+        position: absolute;
+        top: -50px;
+        display: none;
+        pointer-events: none;
+        width: 45px;
+        height: 1px;
+        background-color: #000;
+        &:nth-child(1){
+            margin: 0;
+        }
+        &:nth-child(2){
+            margin: 10px 0;
+        }
+        &:nth-child(3){
+            margin: 20px 0;
+        } 
+}
