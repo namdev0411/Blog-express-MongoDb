@@ -7,13 +7,20 @@ var Schema = mongoose.Schema;
 var postsSchema = new Schema({
     name: String,
     body: String,
-    comments: [
+    description: String,
+    comments: [        
         {
             name:String,
             body: String
         }
     ],
-    like: Number,
-    createAt: Date
+    like: {
+        type: Number,
+        default: 0
+    },
+    createAt: {
+        type: Date,
+        default: Date.now()
+    }
 });
-module.exports.Posts = mongoose.model('Post',postsSchema);
+module.exports.Post = mongoose.model('Post',postsSchema);

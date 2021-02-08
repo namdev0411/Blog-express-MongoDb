@@ -1,12 +1,3 @@
-.blog-footer {
-  height: 200px;
-  background: #555;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .category li {
   margin: 20px;
 }
@@ -20,18 +11,26 @@ main {
   min-height: 70vh;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 .post-info {
   font-size: 12px;
+  text-align: left;
+}
+
+.post ul li {
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+.post-bottom .post-readmore {
+  margin: 0 10px;
+}
+.post-bottom .post-btn-group {
   text-align: right;
-  margin-right: 25px;
+}
+.btn-edit a{
+  color: #fff !important;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -9,12 +9,15 @@
 </head>
 <body>
     <%- include('./nav') %> 
+    <div class="text-right m-4">
+        <a class="btn btn-outline-primary"  href="/post/new">新記事 +</a>
+    </div>
     <main class="container m-4">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <%- include('./category') %> 
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8 post">
                 <ul>
                     <% for (let i =0; i <posts.length;  i++ ) { %>
                         <li>                               
@@ -23,29 +26,49 @@
                                     <%= posts[i].name %> 
                                 </a>
                             </h3>
-                            <p>
-                                <%= posts[i].body %>  
-                            </p>
                             <div>
-                                <p class="post-info">
-                                    Created: 
+                                <p class="post-info"> 
                                     <%= posts[i].createAt.getFullYear()+"-"+
                                         (posts[i].createAt.getMonth()-1+2)+"-"+   
                                         (posts[i].createAt.getDate()-1)
                                      %>
-                                     by Namdev0411 
+                                     Namdev0411 
                                 </p>
+                            </div>
+                            <p>
+                                <%= posts[i].description %>  
+                            </p>
+                            <div class="post-bottom">
+                                <div class="post-readmore">
+                                    <a href=<%="/post/"+posts[i]._id%>>Read more...</a>
+                                </div>
+                                <div class="post-btn-group">
+                                    <button type="button" class="btn btn-success btn-edit">
+                                        <a href="post/edit/<%=posts[i]._id%>">
+                                            Edit    
+                                        </a>
+                                    </button>
+                                    <button type="button" 
+                                    class="btn btn-danger btn-delete"
+                                    data-toggle="modal" 
+                                    data-target="#exampleModal"
+                                    id="btn-delete"
+                                    data-id = "<%=posts[i]._id%>"
+                                    >
+                                        Delete
+                                    </button>
+                                </div>
                             </div>
                         </li> 
                     <% } %> 
                 </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <article>
                     <ul>
                         <li>
                             <a href="#">
-                                <h4 class="text-center">Tôi là ai</h4>
+                                <h4 class="text-center">私は誰か</h4>
                             </a>
                             <p>text ngan</p>
                         </li>
@@ -54,7 +77,10 @@
             </div>
         </div>
     </main>
+       <!--Modal--> 
+    <%- include('./modal.ejs') %> 
     <%- include('./footer.ejs') %> 
     <%- include('./jquery.ejs') %> 
+    <script src="/js/index.js"></script>
 </body>
 </html>

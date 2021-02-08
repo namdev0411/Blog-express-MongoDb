@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./head.ejs') %>
+    <link rel="stylesheet" href="/styles/edit.css"> 
+    <title>Edit</title>
+</head>
+<body>
+    <%- include('./nav') %>
+    <div class="container mt-4">
+        <h2>Edit Page</h2>
+        <form action="/post/edit/<%=post._id%>" method="POST">
+            <div class="form-group">
+            <label for="">タイトル</label>
+            <input type="text"
+                class="form-control" 
+                name="name" id=""
+                value="<%=post.name%>">
+            </div>
+            <div class="form-group">
+                <label for="">記述</label>
+                <input type="text"
+                    class="form-control" 
+                    name="description" 
+                    id="" value="<%=post.description%>">
+            </div>
+            <div class="form-group">
+                <label for="">内容</label>
+                <textarea class="form-control" 
+                name="body" id="" rows="8"
+                ><%=post.body%>
+                </textarea>
+            </div>
+            <div class="btn btn-secondary">
+                <a href="/post/<%=post._id%>">
+                    Cancel
+                </a>
+            </div> 
+            <button type="submit" class="btn btn-primary">
+                Save
+            </button>
+        </form>
+    </div>
+    <%- include('./footer.ejs') %> 
+</body>
+</html>

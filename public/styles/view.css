@@ -26,8 +26,6 @@ a {
   height: 30px;
   width: 30px;
   transition: all 0.25s ease-in-out;
-  border-radius: 50%;
-  background: red;
 }
 .like object.active {
   color: red;
@@ -36,4 +34,8 @@ a {
   transform: scale(1.2);
 }
 
+.post-info {
+  font-size: 12px;
+  text-align: left;
+}
 /*# sourceMappingURL=view.css.map */
