@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./head.ejs') %>
+    <link rel="stylesheet" href="styles/view.css">
+    <title>View Post</title>
+</head>
+<body>
+    <%- include('./nav') %>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-3 pt-4">
+                <%- include('./category') %>
+            </div>
+            <div class="col-md-6">
+                <div class="post">
+                    <h2 class="post-title my-4">
+                        <%=post.name%>
+                    </h2>
+                    <p class="post-content">
+                        <%= post.body %> 
+                    </p>
+                </div>
+                <div class="interactive m-4">
+                    <div class="row">
+                        <div class="like" id="like">
+                            <object data="./icons/like.svg"> </object>
+                        </div>
+                        <div class="comments col-md-10">
+                            <div class="form-group comments-input d-inline">
+                                <label for="comments-body"></label>
+                                <input type="text" name="comment" id="comments-body" 
+                                    class="form-control-sm d-inline col-9 ">
+                                <button type="button" class="btn btn-sm btn-primary">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/view.js"></script>
+</body>
+</html>

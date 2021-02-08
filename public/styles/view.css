@@ -1,0 +1,39 @@
+.category li {
+  margin: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 70vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.like {
+  cursor: pointer;
+}
+.like object {
+  height: 30px;
+  width: 30px;
+  transition: all 0.25s ease-in-out;
+  border-radius: 50%;
+  background: red;
+}
+.like object.active {
+  color: red;
+}
+.like object:hover {
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=view.css.map */
